@@ -24,6 +24,8 @@ else
     sudo composer self-update
 fi
 
+# Make vagrant the owner of .composer
+sudo chown -R vagrant: /home/vagrant/.composer
 
 # Install Global Composer Packages if any are given
 if [[ ! -z $COMPOSER_PACKAGES ]]; then
